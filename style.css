@@ -17,7 +17,7 @@ main{
   background-color: white;
   margin: auto;
   width: 384px;
-  height: 522px;
+  height: 490px;
   position: absolute;
   top: 0;
   left: 0;
@@ -52,8 +52,14 @@ h1{
   font-weight: 800;
 }
 
+h1:hover, h1:active{
+  color: var(--yellow);
+  cursor: pointer;
+}
+
 .content{
   color: hsl(0, 0%, 50%);
+  font-size: 16px;
 }
 
 .avatar{
@@ -68,10 +74,37 @@ h1{
   font-weight: 800;
 }
 
+#foto span{
+  font-size: 14px;
+}
+
 .attribution {
   font-size: 11px;
   position: absolute;
   top: 90%;
-  left: 35%;
+  left: 40%;
 }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (width < 376px) {
+  main{
+    width: 327px;
+    min-width: 300px;
+    height: 450px;
+  }
+
+  .category, .published{
+    font-size: 12px;
+  }
+
+  .content{
+    font-size: 14px;
+  }
+
+  .attribution{
+    left: 35%;
+    top: 88%;
+  }
+}
